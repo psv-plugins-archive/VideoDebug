@@ -15,7 +15,6 @@ static int ksceRegMgrGetKeyInt_patched(const char* category, const char* name, i
 	int ret = TAI_CONTINUE(int,ref_hook,category,name,buf);
 	if(strcmp(name,"debug_videoplayer") == 0)
 	{
-		//ksceDebugPrintf("Spoofing Launch Check\n",category,name,*buf,ret);
 		*buf = 3; 
 		return 0x00;
 	}
